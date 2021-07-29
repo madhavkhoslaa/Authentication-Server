@@ -1,5 +1,4 @@
 const JWT = require("../../models/JWT");
-const Owner = require("../../models/Owner");
 const Impl = require("../routes/JWT");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
@@ -24,4 +23,4 @@ const deleteToken = async (req, res) => {
   return res.status(200).send({ message: "Token Removed" });
 };
 
-modules.export = { issueToken, verifyToken, deleteToken };
+module.exports = { issueToken, verifyToken, deleteToken };
