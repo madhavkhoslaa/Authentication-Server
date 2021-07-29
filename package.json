@@ -1,0 +1,21 @@
+{
+  "name": "authserver",
+  "version": "1.0.0",
+  "description": "An Authentication Server having multiple implementations of Auths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Auth"
+  ],
+  "author": "Madhav Khosla",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.4"
+  }
+}
