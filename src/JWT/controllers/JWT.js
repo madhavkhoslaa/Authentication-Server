@@ -23,4 +23,4 @@ const deleteToken = async (req, res) => {
   return res.status(200).send({ message: "Token Removed" });
 };
 
-module.exports = { issueToken, verifyToken, deleteToken };
+module.exports = { issueToken, verifyToken, deleteToken, decodeToken };
