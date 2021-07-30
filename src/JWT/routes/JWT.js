@@ -1,5 +1,4 @@
 const express = require("express");
-const JWT = require("../../models/JWT");
 const controller = require("../controllers/JWT");
 const JWTRouter = express.Router();
 
