@@ -36,4 +36,4 @@ const removeJWT = async (payload) => {
   const DeletedJWT = await JWT.deleteOne({ token });
 };
 
-module.exports = { createJWT, verifyJWT, decodeJWT };
+module.exports = { createJWT, verifyJWT, decodeJWT, removeJWT };
