@@ -8,6 +8,6 @@ JWTRouter.get("/verify", controller.verifyToken);
 
 JWTRouter.get("/decode", controller.decodeToken);
 
-JWTRouter.delete("/token", controller.deleteToken);
+JWTRouter.delete("/delete", controller.deleteToken);
 
 module.exports = JWTRouter;
