@@ -14,7 +14,7 @@ const issueToken = async (req, res, next) => {
 
 const verifyToken = async (req, res, next) => {
   try {
-    const isValid = await Impl.verifyJWT(req.body);
+    const isValid = Impl.verifyJWT(req.body);
     return res.status(200).send({ isValid });
   } catch (error) {
     next(error);
@@ -23,7 +23,7 @@ const verifyToken = async (req, res, next) => {
 
 const decodeToken = async (req, res, next) => {
   try {
-    const content = await Impl.decodeJWT(req.body);
+    const content = Impl.decodeJWT(req.body);
     return res.status(200).send({ content });
   } catch (error) {
     next(error);
