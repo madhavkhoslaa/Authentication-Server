@@ -16,6 +16,12 @@ const JWTSchema = mongoose.Schema({
   },
 });
 
+JWTSchema.methods.toJSON = function () {
+  const Token = this.toObject();
+  delete Token._id;
+  delete Token.__v;
+  return Token;
+};
 // Add mongoose id type in owner to create a refrence
 const JWT = mongoose.model("JWT", JWTSchema);
 
