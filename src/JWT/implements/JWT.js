@@ -16,17 +16,17 @@ const createJWT = async (payload) => {
   return userToken;
 };
 
-const verifyJWT = async (payload) => {
+const verifyJWT = (payload) => {
   const token = payload.token;
-  jwt.verify(token, process.env.JWT_KEY, (err, valid) => {
-    if (err) {
-      return false;
-    }
+  try {
+    jwt.verify(token, process.env.JWT_KEY);
     return true;
-  });
+  } catch (error) {
+    return false;
+  }
 };
 
-const decodeJWT = async (payload) => {
+const decodeJWT = (payload) => {
   const token = payload.token;
   return jwt.decode(token, process.env.JWT_KEY);
 };
