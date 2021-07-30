@@ -15,3 +15,5 @@ app.use(ErrorHandler);
 app.listen(process.env.PORT, () => {
   console.log(`Listening on ${process.env.PORT}`);
 });
+
+module.exports = app;
