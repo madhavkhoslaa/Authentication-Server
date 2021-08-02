@@ -5,11 +5,10 @@ node_js:
   - 14.17.3
 before_script:
   - "npm install"
+  - "npm test"
 script: "true"
 before_install: []
 install: []
-build:
-  - npm test
 after_script:
   - "echo done"
 after_success: []
