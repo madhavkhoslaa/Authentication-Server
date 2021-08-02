@@ -15,7 +15,7 @@ app.use(ErrorHandler);
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to Auth Server");
 });
-//
+
 app.listen(process.env.PORT, () => {
   console.log(`Listening on ${process.env.PORT}`);
 });
