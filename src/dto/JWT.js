@@ -1,13 +1,12 @@
 const yup = require("yup");
 
-const createJWT = yup.Object().shape({
-  content: yup.string().required(),
-  expires: yup.date().require(),
+const createJWT = yup.object().shape({
+  content: yup.object().required(),
+  expires: yup.date().required(),
 });
 
-const OtherMethods = yup.Object().shape({
+const OtherMethods = yup.object().shape({
   token: yup.string().required(),
 });
 
-//
 module.exports = { createJWT, OtherMethods };
