@@ -13,7 +13,7 @@ app.use(JWT);
 app.use(ErrorHandler);
 
 app.get("/", (req, res) => {
-  res.status(200).send("Welcome to Auth Server !");
+  res.status(200).send("Welcome to Auth Server, Hello!");
 });
 //
 app.listen(process.env.PORT, () => {
